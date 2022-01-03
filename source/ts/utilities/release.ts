@@ -32,6 +32,7 @@ export default class Release {
     const apiResponse = await window.fetch(this.apiUrl(mbid), {
       headers: {
         accept: 'application/json',
+        'user-agent': blinkUserAgent,
       },
     });
 

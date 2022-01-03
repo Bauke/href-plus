@@ -23,14 +23,17 @@ function gitRevParse(): string {
   return JSON.stringify(revParse.stdout.trim());
 }
 
+const blinkVersion = process.env.npm_package_version ?? '<unknown version>';
+
 export default defineConfig({
   build: {
     outDir: buildDir,
     sourcemap: true,
   },
   define: {
-    blinkVersion: JSON.stringify(process.env.npm_package_version),
+    blinkVersion: JSON.stringify(blinkVersion),
     blinkCommitHash: gitRevParse(),
+    blinkUserAgent: `"Blink/${blinkVersion} (https://github.com/Bauke/blink)"`,
   },
   publicDir: path.join(sourceDir, 'assets'),
   root: sourceDir,
