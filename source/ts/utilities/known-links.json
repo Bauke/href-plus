@@ -20,6 +20,10 @@
     "text": "Deezer"
   },
   {
+    "regex": "discogs\\.com$",
+    "text": "Discogs"
+  },
+  {
     "regex": "qobuz\\.com$",
     "text": "Qobuz"
   },
@@ -38,5 +42,10 @@
   {
     "regex": "music\\.youtube\\.com$",
     "text": "YouTube Music"
-  } 
+  },
+  {
+    "__comment": "Make sure we don't match the YouTube Music sub-domain",
+    "regex": "^(www\\.)?(youtu\\.be|youtube\\.com)$",
+    "text": "YouTube"
+  }
 ]
