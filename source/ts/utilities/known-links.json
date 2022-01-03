@@ -34,5 +34,9 @@
   {
     "regex": "tidal\\.com$",
     "text": "Tidal"
-  }
+  },
+  {
+    "regex": "music\\.youtube\\.com$",
+    "text": "YouTube Music"
+  } 
 ]
