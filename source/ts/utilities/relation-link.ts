@@ -12,9 +12,9 @@ type KnownLink = {
   text: string;
 };
 
-const known: KnownLink[] = knownLinks.map((data: Record<string, string>) => ({
-  regex: new RegExp(data.regex),
-  text: data.text,
+const known: KnownLink[] = knownLinks.map((data: Record<string, unknown>) => ({
+  regex: new RegExp(data.regex as string),
+  text: data.text as string,
 }));
 
 export default class RelationLink {
