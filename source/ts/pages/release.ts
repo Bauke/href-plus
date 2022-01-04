@@ -80,8 +80,9 @@ export default class ReleasePage extends Component<Props, State> {
           `,
       );
 
+      const releaseUrl = `https://musicbrainz.org/release/${mbid}`;
       if (urls.length === 0) {
-        const editUrl = `https://musicbrainz.org/release/${mbid}/edit`;
+        const editUrl = `${releaseUrl}/edit`;
         urls.push(
           html`
             <li class="no-links">
@@ -89,6 +90,15 @@ export default class ReleasePage extends Component<Props, State> {
                 There are no links for this release yet, consider${' '}
                 <${ExternalAnchor} url="${editUrl}" text="adding some" />?
               </p>
+            </li>
+          `,
+        );
+      } else {
+        urls.push(
+          html`<li class="divider"></li>`,
+          html`
+            <li class="release-link">
+              <${ExternalAnchor} url="${releaseUrl}" text="MusicBrainz" />
             </li>
           `,
         );

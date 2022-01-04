@@ -37,6 +37,10 @@
   .no-links {
     text-align: center;
   }
+
+  .divider {
+    border-top: 2px solid var(--background-1);
+  }
 }
 
 .release-link {
