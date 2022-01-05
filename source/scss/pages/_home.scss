@@ -6,4 +6,29 @@
     font-size: 1rem;
     vertical-align: top;
   }
+
+  .explainer {
+    background-color: var(--background-2);
+    margin-top: 1rem;
+    max-width: 70rem;
+    padding: 1rem;
+
+    p {
+      line-height: 120%;
+    }
+
+    h2,
+    p {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    code {
+      background-color: var(--background-1);
+      font-size: 85%;
+    }
+  }
 }
