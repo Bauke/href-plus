@@ -1,6 +1,6 @@
 import {Component, html} from 'htm/preact';
-import ExternalAnchor from '../components/external-anchor.js';
 
+import ExternalAnchor from '../components/external-anchor.js';
 import SearchBar from '../components/search-bar.js';
 import SharedFooter from '../components/shared-footer.js';
 
