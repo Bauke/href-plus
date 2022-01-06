@@ -6,7 +6,7 @@ import SharedFooter from '../components/shared-footer.js';
 
 export default class HomePage extends Component {
   render() {
-    document.title = 'Blink';
+    document.title = 'href+';
 
     const links = {
       contribute: html`
@@ -32,7 +32,7 @@ export default class HomePage extends Component {
     return html`
       <div class="home-page">
         <header>
-          <h1>Blink</h1>
+          <h1>href+</h1>
         </header>
 
         <main>
@@ -42,7 +42,7 @@ export default class HomePage extends Component {
             <h2>What is this all about?</h2>
 
             <p>
-              Blink is a website that hopes to make sharing links to music
+              href+ is a website that hopes to make sharing links to music
               easier. By using the data from the ${links.musicbrainz} (an open
               encyclopedia for music metadata) we can provide an easy way to
               share a single link to all the platforms a song or album is

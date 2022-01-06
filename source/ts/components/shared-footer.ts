@@ -4,9 +4,9 @@ import ExternalAnchor from './external-anchor.js';
 
 export default class SharedFooter extends Component {
   render() {
-    const githubUrl = 'https://github.com/Bauke/blink';
-    const versionText = `v${blinkVersion}/${blinkCommitHash}`;
-    const versionUrl = `${githubUrl}/tree/${blinkCommitHash}`;
+    const githubUrl = 'https://github.com/Bauke/href-plus';
+    const versionText = `v${hrefPlusVersion}/${hrefPlusCommitHash}`;
+    const versionUrl = `${githubUrl}/tree/${hrefPlusCommitHash}`;
 
     return html`
       <footer class="shared-footer">

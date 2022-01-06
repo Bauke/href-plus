@@ -1,5 +1,5 @@
 {
-  "name": "blink",
+  "name": "href-plus",
   "version": "0.1.0",
   "license": "GPL-3.0-or-later",
   "author": "Bauke <me@bauke.xyz>",
@@ -7,7 +7,7 @@
     "start": "vite",
     "test": "xo && stylelint 'source/**/*.scss' && tsc",
     "deploy": "vite build --emptyOutDir && pnpm deploy:netlify",
-    "deploy:netlify": "netlify deploy --prod -d 'public' -s 'blink.bauke.xyz'"
+    "deploy:netlify": "netlify deploy --prod -d 'public' -s 'href.plus'"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.1",

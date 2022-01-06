@@ -23,7 +23,7 @@ function gitRevParse(): string {
   return JSON.stringify(revParse.stdout.trim());
 }
 
-const blinkVersion = process.env.npm_package_version ?? '<unknown version>';
+const hrefPlusVersion = process.env.npm_package_version ?? '<unknown version>';
 
 export default defineConfig({
   build: {
@@ -31,9 +31,9 @@ export default defineConfig({
     sourcemap: true,
   },
   define: {
-    blinkVersion: JSON.stringify(blinkVersion),
-    blinkCommitHash: gitRevParse(),
-    blinkUserAgent: `"Blink/${blinkVersion} (https://github.com/Bauke/blink)"`,
+    hrefPlusVersion: JSON.stringify(hrefPlusVersion),
+    hrefPlusCommitHash: gitRevParse(),
+    hrefPlusUserAgent: `"href-plus/${hrefPlusVersion} (https://github.com/Bauke/href-plus)"`,
   },
   publicDir: path.join(sourceDir, 'assets'),
   root: sourceDir,

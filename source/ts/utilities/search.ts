@@ -25,7 +25,7 @@ export default async function searchReleases(
   const response = await window.fetch(url, {
     headers: {
       accept: 'application/json',
-      'user-agent': blinkUserAgent,
+      'user-agent': hrefPlusUserAgent,
     },
   });
 
