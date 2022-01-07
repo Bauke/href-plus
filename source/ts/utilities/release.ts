@@ -50,8 +50,9 @@ export default class Release {
       ? `https://coverartarchive.org/release/${mbid}/front-500`
       : undefined;
 
-    const links = data.relations
-      .map(({url}) => new RelationLink(url.resource))
+    const relations = new Set(data.relations.map(({url}) => url.resource));
+    const links = Array.from(relations)
+      .map((url) => new RelationLink(url))
       .sort((a, b) => a.text.localeCompare(b.text));
 
     return new Release({
