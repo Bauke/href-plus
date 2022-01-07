@@ -18,6 +18,7 @@ const known: KnownLink[] = knownLinks.map((data: Record<string, unknown>) => ({
 }));
 
 export default class RelationLink {
+  public readonly isKnown: boolean;
   public readonly link: URL;
   public readonly original: string;
   public readonly text: string;
@@ -27,6 +28,7 @@ export default class RelationLink {
     this.link = new URL(relationUrl);
 
     const knownLink = known.find(({regex}) => regex.test(this.link.host));
+    this.isKnown = knownLink !== undefined;
     this.text = knownLink?.text ?? this.link.host;
   }
 }

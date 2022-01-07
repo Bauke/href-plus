@@ -58,7 +58,14 @@ export default class Release {
     );
     const links = Array.from(relations)
       .map((url) => new RelationLink(url))
-      .sort((a, b) => a.text.localeCompare(b.text));
+      .sort((a, b) =>
+        // Sort links that aren't known to us at the bottom.
+        a.isKnown === b.isKnown
+          ? a.text.localeCompare(b.text)
+          : b.isKnown
+          ? 1 // This return 1 or -1 is because .sort() expects a number.
+          : -1,
+      );
 
     return new Release({
       artist,
