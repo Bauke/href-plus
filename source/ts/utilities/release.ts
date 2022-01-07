@@ -10,6 +10,7 @@ type ApiReleaseData = {
   };
   id: string;
   relations: Array<{
+    type: string;
     url: {
       resource: string;
     };
@@ -50,7 +51,11 @@ export default class Release {
       ? `https://coverartarchive.org/release/${mbid}/front-500`
       : undefined;
 
-    const relations = new Set(data.relations.map(({url}) => url.resource));
+    const relations = new Set(
+      data.relations
+        .filter((relation) => relation.type !== 'discography entry')
+        .map((relation) => relation.url.resource),
+    );
     const links = Array.from(relations)
       .map((url) => new RelationLink(url))
       .sort((a, b) => a.text.localeCompare(b.text));
