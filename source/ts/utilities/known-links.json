@@ -24,6 +24,10 @@
     "text": "Discogs"
   },
   {
+    "regex": "music\\.monstercat\\.com$",
+    "text": "Monstercat Music"
+  },
+  {
     "regex": "qobuz\\.com$",
     "text": "Qobuz"
   },
