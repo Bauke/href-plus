@@ -1,5 +1,9 @@
 [
   {
+    "regex": "7digital\\.com$",
+    "text": "7digital"
+  },
+  {
     "regex": "amazon\\.com$",
     "text": "Amazon"
   },
