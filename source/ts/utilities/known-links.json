@@ -35,6 +35,11 @@
     "text": "Discogs"
   },
   {
+    "icon": "liquicity.png",
+    "regex": "store\\.liquicity\\.com$",
+    "text": "Liquicity Store"
+  },
+  {
     "icon": "monstercat-music.jpg",
     "regex": "music\\.monstercat\\.com$",
     "text": "Monstercat Music"
