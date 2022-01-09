@@ -74,7 +74,7 @@ export default class ReleasePage extends Component<Props, State> {
       const urls = release.links.map((link) => {
         let linkImage;
         if (link.icon !== undefined) {
-          linkImage = html`<img src="/assets/icons/${link.icon}" />`;
+          linkImage = html`<img src="/icons/${link.icon}" />`;
         }
 
         return html`
