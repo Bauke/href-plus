@@ -45,14 +45,21 @@
 
 .release-link {
   a {
+    align-items: center;
     background-color: var(--background-1);
     border-radius: var(--border-radius);
-    display: block;
+    display: flex;
     padding: 1rem;
     text-decoration: none;
 
     &:hover {
       background-color: var(--foreground-1);
     }
+  }
+
+  img {
+    border-radius: var(--border-radius);
+    height: 3rem;
+    margin-right: 1rem;
   }
 }

@@ -1,57 +1,71 @@
 [
   {
+    "icon": "7digital.png",
     "regex": "7digital\\.com$",
     "text": "7digital"
   },
   {
+    "icon": "amazon.png",
     "regex": "amazon\\.com$",
     "text": "Amazon"
   },
   {
+    "icon": "apple-music.png",
     "regex": "(itunes|music)\\.apple\\.com$",
     "text": "Apple Music"
   },
   {
+    "icon": "bandcamp.png",
     "regex": "bandcamp\\.com$",
     "text": "Bandcamp"
   },
   {
+    "icon": "beatport.png",
     "regex": "beatport\\.com$",
     "text": "Beatport"
   },
   {
+    "icon": "deezer.png",
     "regex": "deezer\\.com$",
     "text": "Deezer"
   },
   {
+    "icon": "discogs.png",
     "regex": "discogs\\.com$",
     "text": "Discogs"
   },
   {
+    "icon": "monstercat-music.jpg",
     "regex": "music\\.monstercat\\.com$",
     "text": "Monstercat Music"
   },
   {
+    "icon": "qobuz.png",
     "regex": "qobuz\\.com$",
     "text": "Qobuz"
   },
   {
+    "icon": "soundcloud.png",
     "regex": "soundcloud\\.com$",
     "text": "SoundCloud"
   },
   {
+    "icon": "spotify.png",
     "regex": "spotify\\.com$",
     "text": "Spotify"
   },
   {
+    "icon": "tidal.png",
     "regex": "tidal\\.com$",
     "text": "Tidal"
   },
   {
+    "icon": "youtube-music.png",
     "regex": "music\\.youtube\\.com$",
     "text": "YouTube Music"
   },
   {
+    "icon": "youtube.png",
     "__comment": "Make sure we don't match the YouTube Music sub-domain",
     "regex": "^(www\\.)?(youtu\\.be|youtube\\.com)$",
     "text": "YouTube"

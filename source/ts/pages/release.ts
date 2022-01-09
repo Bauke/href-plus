@@ -71,14 +71,20 @@ export default class ReleasePage extends Component<Props, State> {
           ? undefined
           : html`<img class="cover-art" src="${release.image}" />`;
 
-      const urls = release.links.map(
-        (link) =>
-          html`
-            <li class="release-link">
-              <${ExternalAnchor} url="${link.original}" text="${link.text}" />
-            </li>
-          `,
-      );
+      const urls = release.links.map((link) => {
+        let linkImage;
+        if (link.icon !== undefined) {
+          linkImage = html`<img src="/assets/icons/${link.icon}" />`;
+        }
+
+        return html`
+          <li class="release-link">
+            <a href="${link.original}" rel="noopener noreferrer">
+              ${linkImage} ${link.text}
+            </a>
+          </li>
+        `;
+      });
 
       const releaseUrl = `https://musicbrainz.org/release/${mbid}`;
       if (urls.length === 0) {

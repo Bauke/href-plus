@@ -8,16 +8,19 @@
 import knownLinks from './known-links.json';
 
 type KnownLink = {
+  icon: string | undefined;
   regex: RegExp;
   text: string;
 };
 
 const known: KnownLink[] = knownLinks.map((data: Record<string, unknown>) => ({
+  icon: data.icon as string | undefined,
   regex: new RegExp(data.regex as string),
   text: data.text as string,
 }));
 
 export default class RelationLink {
+  public readonly icon: string | undefined;
   public readonly isKnown: boolean;
   public readonly link: URL;
   public readonly original: string;
@@ -28,6 +31,7 @@ export default class RelationLink {
     this.link = new URL(relationUrl);
 
     const knownLink = known.find(({regex}) => regex.test(this.link.host));
+    this.icon = knownLink?.icon;
     this.isKnown = knownLink !== undefined;
     this.text = knownLink?.text ?? this.link.host;
   }
