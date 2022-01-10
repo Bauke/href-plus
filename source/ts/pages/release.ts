@@ -104,7 +104,9 @@ export default class ReleasePage extends Component<Props, State> {
           html`<li class="divider"></li>`,
           html`
             <li class="release-link">
-              <${ExternalAnchor} url="${releaseUrl}" text="MusicBrainz" />
+              <a href="${releaseUrl}" rel="noopener noreferrer">
+                <img src="/icons/musicbrainz.png" /> MusicBrainz
+              </a>
             </li>
           `,
         );
