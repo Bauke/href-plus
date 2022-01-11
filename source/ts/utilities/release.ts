@@ -10,6 +10,7 @@ type ApiReleaseData = {
   };
   id: string;
   relations: Array<{
+    ended: boolean;
     type: string;
     url: {
       resource: string;
@@ -53,7 +54,12 @@ export default class Release {
 
     const relations = new Set(
       data.relations
-        .filter((relation) => relation.type !== 'discography entry')
+        // Remove discography entries and links that have been marked as no
+        // longer working.
+        .filter(
+          (relation) =>
+            relation.type !== 'discography entry' && !relation.ended,
+        )
         .map((relation) => relation.url.resource),
     );
     const links = Array.from(relations)
