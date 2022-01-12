@@ -35,6 +35,11 @@
     "text": "Discogs"
   },
   {
+    "icon": "juno-download.png",
+    "regex": "junodownload\\.com$",
+    "text": "Juno Download"
+  },
+  {
     "icon": "liquicity.png",
     "regex": "store\\.liquicity\\.com$",
     "text": "Liquicity Store"
