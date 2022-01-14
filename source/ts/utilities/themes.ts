@@ -17,3 +17,12 @@ export const themes: Theme[] = [
 ];
 
 export const themeContext = createContext<Theme>(themes[0]);
+
+export function getThemeByCssClass(cssClass: string): Theme {
+  return themes.find((theme) => theme.cssClass === cssClass) ?? themes[0];
+}
+
+export function setTheme(theme: Theme): void {
+  document.body.classList.value = theme.cssClass;
+  window.localStorage.setItem('theme', theme.cssClass);
+}
