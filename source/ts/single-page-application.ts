@@ -9,6 +9,7 @@ import {Router} from 'preact-router';
 import HomePage from './pages/home.js';
 import NotFoundPage from './pages/not-found.js';
 import ReleasePage from './pages/release.js';
+import SettingsPage from './pages/settings.js';
 import {getThemeByCssClass, themeContext} from './utilities/themes.js';
 
 const activeTheme = getThemeByCssClass(
@@ -22,6 +23,7 @@ render(
     <${themeContext.Provider} value=${activeTheme}>
       <${Router}>
         <${HomePage} path="/" />
+        <${SettingsPage} path="/settings" />
         <${ReleasePage} path="/release/:mbid" />
         <${NotFoundPage} default />
       <//>

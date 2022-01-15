@@ -1,0 +1,15 @@
+.settings-page {
+  padding: 1rem;
+
+  .setting {
+    background-color: var(--background-2);
+    margin-top: 1rem;
+    max-width: 70rem;
+    padding: 1rem;
+
+    h2,
+    select {
+      margin-bottom: 1rem;
+    }
+  }
+}
