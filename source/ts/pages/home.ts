@@ -59,7 +59,7 @@ export default class HomePage extends Component {
           </div>
         </main>
 
-        <${SharedFooter} />
+        <${SharedFooter} page="home" />
       </div>
     `;
   }

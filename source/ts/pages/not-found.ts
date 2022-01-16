@@ -13,7 +13,7 @@ export default class NotFoundPage extends Component {
           <a href="/">← Home</a>
         </main>
 
-        <${SharedFooter} />
+        <${SharedFooter} page="not-found" />
       </div>
     `;
   }

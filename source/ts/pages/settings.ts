@@ -59,7 +59,7 @@ export default class SettingsPage extends Component<Props, State> {
           </p>
         </section>
 
-        <${SharedFooter} />
+        <${SharedFooter} page="settings" />
       </div>
     `;
   }
