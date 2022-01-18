@@ -1,4 +1,6 @@
 .search-bar {
+  max-width: 70rem;
+
   input[type='text'] {
     background-color: var(--background-2);
     border: 1px solid var(--foreground-1);
