@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /release/
+Disallow: /settings
