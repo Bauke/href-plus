@@ -50,6 +50,11 @@
     "text": "Monstercat Music"
   },
   {
+    "icon": "napster.png",
+    "regex": "napster\\.com$",
+    "text": "Napster"
+  },
+  {
     "icon": "qobuz.png",
     "regex": "qobuz\\.com$",
     "text": "Qobuz"
