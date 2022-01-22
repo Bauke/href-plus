@@ -6,7 +6,7 @@
   },
   {
     "icon": "amazon.png",
-    "regex": "amazon(\\.co\\.uk|\\.com)$",
+    "regex": "amazon\\.(co\\.jp|co\\.uk|com|de|fr|nl)$",
     "text": "Amazon"
   },
   {
