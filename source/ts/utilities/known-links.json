@@ -35,6 +35,11 @@
     "text": "Discogs"
   },
   {
+    "icon": "mora.png",
+    "regex": "mora\\.jp$",
+    "text": "Mora"
+  },
+  {
     "icon": "juno-download.png",
     "regex": "junodownload\\.com$",
     "text": "Juno Download"
