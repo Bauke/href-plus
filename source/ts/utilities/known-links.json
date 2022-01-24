@@ -35,11 +35,6 @@
     "text": "Discogs"
   },
   {
-    "icon": "mora.png",
-    "regex": "mora\\.jp$",
-    "text": "Mora"
-  },
-  {
     "icon": "juno-download.png",
     "regex": "junodownload\\.com$",
     "text": "Juno Download"
@@ -55,9 +50,19 @@
     "text": "Monstercat Music"
   },
   {
+    "icon": "mora.png",
+    "regex": "mora\\.jp$",
+    "text": "Mora"
+  },
+  {
     "icon": "napster.png",
     "regex": "napster\\.com$",
     "text": "Napster"
+  },
+  {
+    "icon": "ototoy.png",
+    "regex": "ototoy\\.jp$",
+    "text": "Ototoy"
   },
   {
     "icon": "qobuz.png",
