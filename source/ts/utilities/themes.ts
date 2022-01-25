@@ -14,6 +14,14 @@ export const themes: Theme[] = [
     cssClass: 'love-light',
     name: 'Love Light',
   },
+  {
+    cssClass: 'solarized-dark',
+    name: 'Solarized Dark',
+  },
+  {
+    cssClass: 'solarized-light',
+    name: 'Solarized Light',
+  },
 ];
 
 export const themeContext = createContext<Theme>(themes[0]);
