@@ -22,6 +22,10 @@ export const themes: Theme[] = [
     cssClass: 'solarized-light',
     name: 'Solarized Light',
   },
+  {
+    cssClass: 'dracula',
+    name: 'Dracula',
+  },
 ];
 
 export const themeContext = createContext<Theme>(themes[0]);
