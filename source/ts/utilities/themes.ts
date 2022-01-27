@@ -26,6 +26,10 @@ export const themes: Theme[] = [
     cssClass: 'dracula',
     name: 'Dracula',
   },
+  {
+    cssClass: 'monokai',
+    name: 'Monokai',
+  },
 ];
 
 export const themeContext = createContext<Theme>(themes[0]);
