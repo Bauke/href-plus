@@ -2,7 +2,12 @@ import {Component, html} from 'htm/preact';
 
 import ExternalAnchor from '../components/external-anchor.js';
 import SharedFooter from '../components/shared-footer.js';
-import {getThemeByCssClass, setTheme, themes} from '../utilities/themes.js';
+import {
+  defaultTheme,
+  getThemeByCssClass,
+  setTheme,
+  themes,
+} from '../utilities/themes.js';
 
 type Props = Record<string, unknown>;
 
@@ -15,7 +20,8 @@ export default class SettingsPage extends Component<Props, State> {
     super(props);
 
     this.state = {
-      selectedTheme: window.localStorage.getItem('theme') ?? themes[0].cssClass,
+      selectedTheme:
+        window.localStorage.getItem('theme') ?? defaultTheme.cssClass,
     };
   }
 

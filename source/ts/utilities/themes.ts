@@ -5,11 +5,13 @@ type Theme = {
   name: string;
 };
 
+export const defaultTheme: Theme = {
+  cssClass: 'love-dark',
+  name: 'Love Dark',
+};
+
 export const themes: Theme[] = [
-  {
-    cssClass: 'love-dark',
-    name: 'Love Dark',
-  },
+  defaultTheme,
   {
     cssClass: 'love-light',
     name: 'Love Light',
@@ -30,12 +32,12 @@ export const themes: Theme[] = [
     cssClass: 'monokai',
     name: 'Monokai',
   },
-];
+].sort((a, b) => a.name.localeCompare(b.name));
 
-export const themeContext = createContext<Theme>(themes[0]);
+export const themeContext = createContext<Theme>(defaultTheme);
 
 export function getThemeByCssClass(cssClass: string): Theme {
-  return themes.find((theme) => theme.cssClass === cssClass) ?? themes[0];
+  return themes.find((theme) => theme.cssClass === cssClass) ?? defaultTheme;
 }
 
 export function setTheme(theme: Theme): void {
