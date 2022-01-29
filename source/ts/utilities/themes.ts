@@ -32,6 +32,14 @@ export const themes: Theme[] = [
     cssClass: 'monokai',
     name: 'Monokai',
   },
+  {
+    cssClass: 'high-contrast-black',
+    name: 'High Contrast Black',
+  },
+  {
+    cssClass: 'high-contrast-white',
+    name: 'High Contrast White',
+  },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export const themeContext = createContext<Theme>(defaultTheme);
