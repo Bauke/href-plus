@@ -1,6 +1,6 @@
 .release {
   background-color: var(--background-2);
-  border: 1px solid var(--foreground-2);
+  border: var(--border-size) solid var(--foreground-2);
   margin: 2rem auto;
   max-width: 40rem;
 }
@@ -39,7 +39,7 @@
   }
 
   .divider {
-    border-top: 2px solid var(--background-1);
+    border-top: var(--border-size) solid var(--background-1);
   }
 }
 
