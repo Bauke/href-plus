@@ -1,8 +1,6 @@
 @use 'sass:color';
 
 .monokai {
-  --border-radius: 8px;
-  --border-size: 2px;
   --foreground-1: #d6d6d6;
   --foreground-2: #d6d6d6;
   --background-1: #{color.scale(#2e2e2e, $lightness: -25%)};
