@@ -19,9 +19,14 @@ export type SearchResult = {
 
 export default async function searchReleases(
   query: string,
+  offset?: number,
 ): Promise<SearchResult[]> {
   query = encodeURIComponent(query);
-  const url = `https://musicbrainz.org/ws/2/release?query=${query}`;
+  let url = `https://musicbrainz.org/ws/2/release?query=${query}`;
+  if (offset !== undefined) {
+    url += `&offset=${offset}`;
+  }
+
   const response = await window.fetch(url, {
     headers: {
       accept: 'application/json',

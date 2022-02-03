@@ -24,6 +24,23 @@ export default class SearchBar extends Component<Props, State> {
     };
   }
 
+  searchMore = async (): Promise<void> => {
+    if (this.state.searchValue.length === 0) {
+      this.setState({searchResults: [], searchState: 'waiting'});
+      return;
+    }
+
+    this.setState({
+      searchResults: [
+        ...this.state.searchResults,
+        ...(await searchReleases(
+          this.state.searchValue,
+          this.state.searchResults.length,
+        )),
+      ],
+    });
+  };
+
   searchQuery = async (): Promise<void> => {
     if (this.state.searchValue.length === 0) {
       this.setState({searchResults: [], searchState: 'waiting'});
@@ -76,6 +93,17 @@ export default class SearchBar extends Component<Props, State> {
     } else if (isLoading) {
       results.unshift(
         html`<li class="search-state">Searching for releases…</li>`,
+      );
+    }
+
+    const resultAmount = this.state.searchResults.length;
+    if (resultAmount > 0 && resultAmount % 25 === 0) {
+      results.push(
+        html`
+          <li class="search-state">
+            <button onClick=${this.searchMore}>Load more…</button>
+          </li>
+        `,
       );
     }
 
