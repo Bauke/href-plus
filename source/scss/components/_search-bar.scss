@@ -47,4 +47,17 @@
       vertical-align: middle;
     }
   }
+
+  .load-more {
+    background-color: var(--background-1);
+    border: var(--border-size) solid var(--foreground-1);
+    color: var(--foreground-1);
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: var(--foreground-1);
+      color: var(--background-1);
+    }
+  }
 }

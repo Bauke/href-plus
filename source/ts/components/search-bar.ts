@@ -101,7 +101,7 @@ export default class SearchBar extends Component<Props, State> {
       results.push(
         html`
           <li class="search-state">
-            <button onClick=${this.searchMore}>Load more…</button>
+            <button class="load-more" onClick=${this.searchMore}>Load more…</button>
           </li>
         `,
       );
