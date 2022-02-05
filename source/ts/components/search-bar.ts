@@ -1,7 +1,10 @@
 import {Component, html} from 'htm/preact';
 
 import debounce from '../utilities/debounce.js';
-import searchReleases, {SearchResult} from '../utilities/search.js';
+import searchReleases, {
+  searchLimit,
+  SearchResult,
+} from '../utilities/search.js';
 
 type Props = Record<string, unknown>;
 
@@ -97,11 +100,13 @@ export default class SearchBar extends Component<Props, State> {
     }
 
     const resultAmount = this.state.searchResults.length;
-    if (resultAmount > 0 && resultAmount % 25 === 0) {
+    if (resultAmount > 0 && resultAmount % searchLimit === 0) {
       results.push(
         html`
           <li class="search-state">
-            <button class="load-more" onClick=${this.searchMore}>Load more…</button>
+            <button class="load-more" onClick=${this.searchMore}>
+              Load more…
+            </button>
           </li>
         `,
       );

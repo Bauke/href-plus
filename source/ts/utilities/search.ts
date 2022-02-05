@@ -17,12 +17,14 @@ export type SearchResult = {
   title: string;
 };
 
+export const searchLimit = 25;
+
 export default async function searchReleases(
   query: string,
   offset?: number,
 ): Promise<SearchResult[]> {
   query = encodeURIComponent(query);
-  let url = `https://musicbrainz.org/ws/2/release?query=${query}`;
+  let url = `https://musicbrainz.org/ws/2/release?query=${query}&limit=${searchLimit}`;
   if (offset !== undefined) {
     url += `&offset=${offset}`;
   }
