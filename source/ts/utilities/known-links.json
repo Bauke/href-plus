@@ -70,6 +70,11 @@
     "text": "Qobuz"
   },
   {
+    "icon": "rateyourmusic.png",
+    "regex": "rateyourmusic\\.com$",
+    "text": "Rate Your Music"
+  },
+  {
     "icon": "soundcloud.png",
     "regex": "soundcloud\\.com$",
     "text": "SoundCloud"
