@@ -40,6 +40,14 @@ export const themes: Theme[] = [
     cssClass: 'high-contrast-white',
     name: 'High Contrast White',
   },
+  {
+    cssClass: 'gruvbox-dark',
+    name: 'Gruvbox Dark',
+  },
+  {
+    cssClass: 'gruvbox-light',
+    name: 'Gruvbox Light',
+  },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export const themeContext = createContext<Theme>(defaultTheme);
