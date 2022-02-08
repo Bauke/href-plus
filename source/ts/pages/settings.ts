@@ -2,6 +2,7 @@ import {Component, html} from 'htm/preact';
 
 import ExternalAnchor from '../components/external-anchor.js';
 import SharedFooter from '../components/shared-footer.js';
+import {isDebugEnabled} from '../utilities/debug.js';
 import {
   defaultTheme,
   getThemeByCssClass,
@@ -12,6 +13,7 @@ import {
 type Props = Record<string, unknown>;
 
 type State = {
+  debugChecked: boolean;
   selectedTheme: string;
 };
 
@@ -20,10 +22,16 @@ export default class SettingsPage extends Component<Props, State> {
     super(props);
 
     this.state = {
+      debugChecked: isDebugEnabled(),
       selectedTheme:
         window.localStorage.getItem('theme') ?? defaultTheme.cssClass,
     };
   }
+
+  onDebugChange = (event: Event) => {
+    const checked = (event.target as HTMLInputElement).checked;
+    window.localStorage.setItem('debug', checked.toString());
+  };
 
   onThemeChange = (event: Event) => {
     const theme = getThemeByCssClass((event.target as HTMLSelectElement).value);
@@ -63,6 +71,21 @@ export default class SettingsPage extends Component<Props, State> {
             If your favorite theme isn't in the list here, please make a request
             for it in the ${moreThemesLink}!
           </p>
+        </section>
+
+        <section class="setting">
+          <h2>Debug</h2>
+
+          <input
+            checked=${this.state.debugChecked}
+            id="debug-checkbox"
+            name="debug-checkbox"
+            onChange=${this.onDebugChange}
+            type="checkbox"
+          />
+          <label for="debug-checkbox">
+            Log debug information to the console.
+          </label>
         </section>
 
         <${SharedFooter} page="settings" />

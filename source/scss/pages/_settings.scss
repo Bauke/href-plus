@@ -12,5 +12,11 @@
     select {
       margin-bottom: 1rem;
     }
+
+    input[type='checkbox'] {
+      height: 1.75rem;
+      width: 1.75rem;
+      margin-right: 0.5rem;
+    }
   }
 }
