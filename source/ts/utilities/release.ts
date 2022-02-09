@@ -1,3 +1,4 @@
+import {debug} from './debug.js';
 import RelationLink from './relation-link.js';
 
 type ApiReleaseData = {
@@ -43,6 +44,7 @@ export default class Release {
     }
 
     const data = (await apiResponse.json()) as ApiReleaseData;
+    debug(data);
 
     const artist = data['artist-credit']
       .map(({name, joinphrase}) => `${name}${joinphrase}`)

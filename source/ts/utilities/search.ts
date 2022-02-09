@@ -1,3 +1,5 @@
+import {debug} from './debug.js';
+
 type ApiSearchData = {
   releases: Array<{
     'artist-credit': Array<{
@@ -41,6 +43,8 @@ export default async function searchReleases(
   }
 
   const data = (await response.json()) as ApiSearchData;
+  debug(data);
+
   const results: SearchResult[] = [];
 
   for (const release of data.releases) {
