@@ -10,20 +10,20 @@
     "deploy:netlify": "netlify deploy --prod -d 'public' -s 'href.plus'"
   },
   "dependencies": {
-    "@fontsource/inter": "^4.5.2",
+    "@fontsource/inter": "^4.5.3",
     "htm": "^3.1.0",
     "modern-normalize": "^1.1.0",
     "preact": "^10.6.5",
     "preact-router": "^3.2.1"
   },
   "devDependencies": {
-    "@types/node": "^17.0.14",
+    "@types/node": "^17.0.17",
     "postcss": "^8.4.6",
     "sass": "^1.49.7",
-    "stylelint": "^14.3.0",
+    "stylelint": "^14.5.0",
     "stylelint-config-standard-scss": "^3.0.0",
     "typescript": "^4.5.5",
-    "vite": "^2.7.13",
+    "vite": "^2.8.0",
     "xo": "^0.47.0"
   },
   "stylelint": {
