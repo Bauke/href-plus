@@ -9,6 +9,7 @@ type ApiReleaseData = {
   'cover-art-archive': {
     front: boolean;
   };
+  date: string | undefined;
   id: string;
   relations: Array<{
     ended: boolean;
@@ -23,6 +24,7 @@ type ApiReleaseData = {
 // eslint-disable-next-line @typescript-eslint/naming-convention
 interface IRelease {
   artist: string;
+  date: string | undefined;
   image: string | undefined;
   links: RelationLink[];
   title: string;
@@ -77,6 +79,7 @@ export default class Release {
 
     return new Release({
       artist,
+      date: data.date,
       image,
       links,
       title: data.title,

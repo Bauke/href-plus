@@ -66,6 +66,11 @@ export default class ReleasePage extends Component<Props, State> {
     if (loading === 'finished' && release !== undefined) {
       document.title = release.display();
 
+      const date =
+        release.date === undefined
+          ? undefined
+          : html`<span class="release-date">${release.date}</span>`;
+
       const image =
         release.image === undefined
           ? undefined
@@ -117,6 +122,7 @@ export default class ReleasePage extends Component<Props, State> {
           <header class="release-header">
             ${image}
             <h1>${release.artist}<br />${release.title}</h1>
+            ${date}
           </header>
 
           <main class="release-main">
